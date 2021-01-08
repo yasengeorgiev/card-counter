@@ -1,0 +1,10 @@
+D:\C#_Projects\CardCounter\obj\Debug\CardCounter.csprojAssemblyReference.cache
+D:\C#_Projects\CardCounter\obj\Debug\CardCounter.Form1.resources
+D:\C#_Projects\CardCounter\obj\Debug\CardCounter.Properties.Resources.resources
+D:\C#_Projects\CardCounter\obj\Debug\CardCounter.csproj.GenerateResource.cache
+D:\C#_Projects\CardCounter\obj\Debug\CardCounter.csproj.CoreCompileInputs.cache
+D:\C#_Projects\CardCounter\bin\Debug\CardCounter.exe.config
+D:\C#_Projects\CardCounter\bin\Debug\CardCounter.exe
+D:\C#_Projects\CardCounter\bin\Debug\CardCounter.pdb
+D:\C#_Projects\CardCounter\obj\Debug\CardCounter.exe
+D:\C#_Projects\CardCounter\obj\Debug\CardCounter.pdb
