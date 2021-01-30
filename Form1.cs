@@ -15,6 +15,7 @@ namespace CardCounter
         public Form1()
         {
             InitializeComponent();
+            calculateChances();
             //8 decks
             //all cards: 416 (4*13*8)
             //lbl_remaining_cards.Text = "416";
@@ -26,70 +27,93 @@ namespace CardCounter
         string initialCountForTens = "128";
         double allCards = 416;
         double card_2 = 32;
-        
+        double card_3 = 32;
+        double card_4 = 32;
+        double card_5 = 32;
+        double card_6 = 32;
+        double card_7 = 32;
+        double card_8 = 32;
+        double card_9 = 32;
+        double card_ace = 32;
+        double card_10 = 128;
+
         //this method calculates the remaining number of cards of specific kind (for example all the aces)
         private double dealingCards(double card)
         {
             card -= 1;
+            allCards--;
+            lbl_remaining_cards.Text = allCards.ToString();
             return card;
         } 
 
         private void btn_2_Click(object sender, EventArgs e)
         {
-            //lbl_2.Text = (Convert.ToInt32(lbl_2.Text) - 1).ToString();
-
             lbl_2.Text = dealingCards(card_2).ToString();
             card_2--;
-            allCards--;
-
-            //lbl_2.text = (card2 - 1).tostring();
-            //card2--;
             calculateChances();
         }
 
         private void btn_3_Click(object sender, EventArgs e)
         {
-            //lbl_3.Text = (Convert.ToInt32(lbl_3.Text) - 1).ToString();
+            lbl_3.Text = dealingCards(card_3).ToString();
+            card_3--;
+            calculateChances();
         }
 
         private void btn_4_Click(object sender, EventArgs e)
         {
-            lbl_4.Text = (Convert.ToInt32(lbl_4.Text) - 1).ToString();
+            lbl_4.Text = dealingCards(card_4).ToString();
+            card_4--;
+            calculateChances();
         }
 
         private void btn_5_Click(object sender, EventArgs e)
         {
-            lbl_5.Text = (Convert.ToInt32(lbl_5.Text) - 1).ToString();
+            lbl_5.Text = dealingCards(card_5).ToString();
+            card_5--;
+            calculateChances();
         }
 
         private void btn_6_Click(object sender, EventArgs e)
         {
-            lbl_6.Text = (Convert.ToInt32(lbl_6.Text) - 1).ToString();
+            lbl_6.Text = dealingCards(card_6).ToString();
+            card_6--;
+            calculateChances();
         }
 
         private void btn_7_Click(object sender, EventArgs e)
         {
-            lbl_7.Text = (Convert.ToInt32(lbl_7.Text) - 1).ToString();
+            lbl_7.Text = dealingCards(card_7).ToString();
+            card_7--;
+            calculateChances();
         }
 
         private void btn_8_Click(object sender, EventArgs e)
         {
-            lbl_8.Text = (Convert.ToInt32(lbl_8.Text) - 1).ToString();
+            lbl_8.Text = dealingCards(card_8).ToString();
+            card_8--;
+            calculateChances();
         }
 
         private void btn_9_Click(object sender, EventArgs e)
         {
-            lbl_9.Text = (Convert.ToInt32(lbl_9.Text) - 1).ToString();
+            lbl_9.Text = dealingCards(card_9).ToString();
+            card_9--;
+            calculateChances();
         }
 
         private void btn_10_Click(object sender, EventArgs e)
         {
-            lbl_10.Text = (Convert.ToInt32(lbl_10.Text) - 1).ToString();
+            lbl_10.Text = dealingCards(card_10).ToString();
+            card_10--;
+            calculateChances();
         }
 
         private void btn_ace_Click(object sender, EventArgs e)
         {
-            lbl_ace.Text = (Convert.ToInt32(lbl_ace.Text) - 1).ToString();
+            lbl_ace.Text = dealingCards(card_ace).ToString();
+            card_ace--;
+            calculateChances();
         }
 
         //method for resetting the label values
@@ -122,15 +146,16 @@ namespace CardCounter
         // this method is going to calculate what are the chances for a certain card to be dealt
         private void calculateChances()
         {
-            Console.WriteLine(card_2);
-            Console.WriteLine(allCards);
-            Console.WriteLine(card_2/allCards);
             lbl_chances_2.Text = Math.Round(((card_2 / allCards) * 100), 2).ToString();
-
-            Console.WriteLine("------------------");
-            Console.WriteLine(card_2);
-            Console.WriteLine(allCards);
-            Console.WriteLine(lbl_chances_2.Text);
+            lbl_chances_3.Text = Math.Round(((card_3 / allCards) * 100), 2).ToString();
+            lbl_chances_4.Text = Math.Round(((card_4 / allCards) * 100), 2).ToString();
+            lbl_chances_5.Text = Math.Round(((card_5 / allCards) * 100), 2).ToString();
+            lbl_chances_6.Text = Math.Round(((card_6 / allCards) * 100), 2).ToString();
+            lbl_chances_7.Text = Math.Round(((card_7 / allCards) * 100), 2).ToString();
+            lbl_chances_8.Text = Math.Round(((card_8 / allCards) * 100), 2).ToString();
+            lbl_chances_9.Text = Math.Round(((card_9 / allCards) * 100), 2).ToString();
+            lbl_chances_ace.Text = Math.Round(((card_ace / allCards) * 100), 2).ToString();
+            lbl_chances_10.Text = Math.Round(((card_10 / allCards) * 100), 2).ToString();
         }
     }
 }
